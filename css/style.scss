@@ -344,6 +344,29 @@ footer {
   }
 }
 
+::-webkit-scrollbar {
+  width: 1.3em;
+}
+::-webkit-scrollbar-track {
+  border-radius: 100vw;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient($cl--yellow, $cl--soft-red);
+  border-radius: 100vw;
+  border: 1px solid $cl--white;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    hsla(51, 100%, 49%, 0.589),
+    hsla(7, 99%, 70%, 0.589)
+  );
+  opacity: 0.4;
+}
+@supports (scrollbar-color: red blue) {
+  * {
+    scrollbar-color: $cl--soft-red $cl--white;
+  }
+}
 @media (min-width: 375px) {
   .header {
     background-image: url("../images/desktop/image-header.jpg");

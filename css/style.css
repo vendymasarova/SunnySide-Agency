@@ -387,6 +387,33 @@ footer .social {
   padding-bottom: 4rem;
 }
 
+::-webkit-scrollbar {
+  width: 1.3em;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background: -webkit-gradient(linear, left top, left bottom, from(#fad400), to(#fe7867));
+  background: linear-gradient(#fad400, #fe7867);
+  border-radius: 100vw;
+  border: 1px solid white;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(250, 212, 0, 0.589)), to(rgba(254, 120, 103, 0.589)));
+  background: linear-gradient(rgba(250, 212, 0, 0.589), rgba(254, 120, 103, 0.589));
+  opacity: 0.4;
+}
+
+@supports (scrollbar-color: red blue) {
+  * {
+    scrollbar-color: #fe7867 white;
+  }
+}
+
 @media (min-width: 375px) {
   .header {
     background-image: url("../images/desktop/image-header.jpg");
